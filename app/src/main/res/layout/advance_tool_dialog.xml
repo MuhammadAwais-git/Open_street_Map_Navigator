@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="4dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:background="@drawable/dialog_round"
+    android:layout_gravity="center">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_speedometer"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/constraint_Altitudemter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/dialogSpeedometer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/speed_meter"
+            app:layout_constraintBottom_toTopOf="@+id/txt_speedometer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_speedometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="3dp"
+            android:text="Speedometer"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_Altitudemter"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraint_speedometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraint_speedometer"
+        app:layout_constraintTop_toTopOf="@+id/constraint_speedometer">
+
+        <ImageView
+            android:id="@+id/dialogaltitudemeter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/altitude_meter"
+            app:layout_constraintBottom_toTopOf="@+id/txt_altitude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_altitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Altitude Meter"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_weather"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/constraint_speedometer"
+        app:layout_constraintStart_toStartOf="@+id/constraint_speedometer"
+        app:layout_constraintTop_toBottomOf="@id/constraint_speedometer">
+
+        <ImageView
+            android:id="@+id/dialogweather"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/weather_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weather"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogweather" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_compaass"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraint_weather"
+        app:layout_constraintEnd_toEndOf="@+id/constraint_Altitudemter"
+        app:layout_constraintStart_toStartOf="@+id/constraint_Altitudemter"
+        app:layout_constraintTop_toTopOf="@+id/constraint_weather">
+
+        <ImageView
+            android:id="@+id/dialogcompass"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/compass_meter"
+            android:text="Compass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_compass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Compass"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogcompass" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

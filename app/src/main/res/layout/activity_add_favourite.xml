@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Favourite.AddFavouriteActivity">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:elevation="11dp"
+        android:src="@drawable/back_arrow"
+        android:layout_marginStart="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_search"
+        app:layout_constraintStart_toStartOf="@+id/txt_search"
+        app:layout_constraintTop_toTopOf="@+id/txt_search" />
+
+
+    <EditText
+        android:id="@+id/txt_search"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search_round"
+        android:elevation="10dp"
+        android:ellipsize="end"
+        android:hint="Search"
+        android:textColor="@color/black"
+        android:textColorHint="@color/silver"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="50dp"
+        android:singleLine="true"
+        android:textSize="15dp"
+        android:drawableTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgsearch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_search"
+        app:layout_constraintEnd_toEndOf="@+id/txt_search"
+        app:layout_constraintTop_toTopOf="@+id/txt_search"
+        app:tint="@color/black" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/MapFavrtPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnsaveplaces"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20sp"
+        app:icon="@drawable/btn_save"
+        android:elevation="6dp"
+        android:text="Save"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/MapFavrtPlaces"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/MapFavrtPlaces" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/Cardcurrentlocation"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="25dp"
+        android:layout_marginBottom="200dp"
+        app:cardBackgroundColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+      >
+
+        <ImageView
+            android:id="@+id/imgcurrentlocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/current_location" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

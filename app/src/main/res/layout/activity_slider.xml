@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.Slider.SliderActivity">
+
+    <TextView
+        android:id="@+id/txt_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Skip"
+        android:elevation="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--view pager for displaying our slides-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/idViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sliderstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00B4FF"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="7dp"
+        android:text="Let's Start"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="@+id/idViewPager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:id="@+id/idLLDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fcarview"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/idTVSlideOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:elevation="4dp"
+                    android:text="•"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--on below line we are creating a text view
+                 for displaying our dots-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/secondcarview"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/silver"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/idTVSlideTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:elevation="4dp"
+                    android:text="•"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/thirdcarview"
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/silver"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/idTVSlideThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:elevation="4dp"
+                    android:text="•"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

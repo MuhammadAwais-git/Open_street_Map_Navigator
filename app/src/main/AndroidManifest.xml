@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.navigatorapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NavigatorApp">
+        <activity
+            android:name=".Splaash.SplaashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.Slider.SliderActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".Navigation.TestNavigation"
+            android:exported="false" />
+        <activity
+            android:name=".Favourite.AddFavouriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Favourite.FavouritePlacesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Compass.CompassActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Weather.WeatherActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AltitudeMeter.AltitudemeterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Speedometer.SpeedometerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StatlliteMap.StatellitemapActicity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EarthMap.EarthmapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MapThroughCoordinates"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RouteNavigation.CoordinatesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RouteNavigation.POI_Route_Activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

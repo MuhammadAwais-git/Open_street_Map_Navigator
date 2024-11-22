@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AltitudeMeter.AltitudemeterActivity">
+
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_arrow"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_speedometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altitude Meter"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="@+id/btn_back" />
+
+    <com.github.anastr.speedviewlib.AwesomeSpeedometer
+        android:id="@+id/altitudeview"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        app:sv_unitTextColor="@color/white"
+        app:sv_textColor="@color/white"
+        app:sv_maxSpeed="1000"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_switch" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_destination"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:background="@drawable/round_with_blue_max_corner"
+        android:backgroundTint="#4B7AFC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@drawable/orangemarker"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtaddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtaddress" />
+
+        <TextView
+            android:id="@+id/txtaddress"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="adress"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            tools:ignore="EllipsizeMaxLines"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtaddress" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/txt_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="35dp"
+            app:layout_constraintTop_toBottomOf="@+id/img" />
+
+        <TextView
+            android:id="@+id/txt_setlong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12347"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_long"
+            app:layout_constraintStart_toEndOf="@+id/txt_long"
+            app:layout_constraintTop_toTopOf="@+id/txt_long" />
+
+        <TextView
+            android:id="@+id/txt_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/img" />
+
+        <TextView
+            android:id="@+id/txt_setlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="8dp"
+            android:text="12347"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_lat"
+            app:layout_constraintStart_toEndOf="@+id/txt_lat"
+            app:layout_constraintTop_toTopOf="@+id/txt_lat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_switch"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:elevation="5dp"
+        android:background="@drawable/round_with_blue_max_corner"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/altitudeview"
+        app:layout_constraintStart_toStartOf="@+id/altitudeview"
+        app:layout_constraintTop_toBottomOf="@+id/txt_speedometer">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_meter"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#4B7AFC"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtmeter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:text="Meter"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnfeet"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtfeet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Feet"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

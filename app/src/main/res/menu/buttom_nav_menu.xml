@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/BoottmNavigation_POI"
+        android:icon="@drawable/p_o_i"
+        android:title="POI" />
+    <item
+        android:id="@+id/BoottmNavigation_Coordinate"
+        android:icon="@drawable/cordinates_tes"
+        android:title="Address"
+        app:showAsAction="never"
+        />
+
+</menu>

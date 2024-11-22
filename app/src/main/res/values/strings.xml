@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Navigator</string>
+
+
+    <string name="earth_map">Earth Map</string>
+    <string name="statellite_map">statellite Map</string>
+    <string name="favourites">Favourites</string>
+    <string name="tools">Tools</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">cancel</string>
+    <string name="ok">ok</string>
+    <string name="departure">Departure</string>
+    <string name="destination">Destination</string>
+    <string name="where_to_go">where to go?</string>
+
+    <string name="rate_app" translatable="false">https://play.google.com/store/apps/details?id=com.ss.navigate.gpsnavigation.map</string>
+    <string name="feed_back" translatable="false">sonikstudio001@gmail.com</string>
+    <string name="share_app_link" translatable="false">https://play.google.com/store/apps/details?id=com.ss.navigate.gpsnavigation.map</string>
+    <string name="more_app" translatable="false">https://play.google.com/store/apps/developer?id=Sonikstudio</string>
+    <string name="privacy_policy_link" translatable="false">https://sonikstudio001.blogspot.com/2022/12/gps-navigation-fastest-route.html</string>
+
+</resources>

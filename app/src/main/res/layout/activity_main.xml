@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/mainmap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_MainDrawer"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_with_blue"
+            android:padding="10dp"
+            android:src="@drawable/drawer_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Cardmainserch"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/image_MainDrawer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_MainDrawer"
+            app:layout_constraintTop_toTopOf="@id/image_MainDrawer">
+
+            <EditText
+                android:id="@+id/txt_Mainsearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="@string/where_to_go"
+                android:imeOptions="actionSearch"
+                android:textColorHint="@color/silver"
+                android:drawablePadding="5dp"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:paddingEnd="5dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:layout_margin="5dp"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:drawableTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                android:id="@+id/noteTitleLt"-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:hint="where to go?"-->
+            <!--                android:textColorHint="@color/blue"-->
+            <!--                app:boxStrokeColor="@color/blue"-->
+            <!--                app:boxStrokeWidth="1dp"-->
+            <!--                android:layout_margin="3dp"-->
+            <!--                app:boxStrokeWidthFocused="1.5dp"-->
+            <!--                app:counterTextColor="@color/blue"-->
+            <!--                app:endIconMode="clear_text"-->
+            <!--                app:hintTextColor="@color/blue"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/image_MainDrawer"-->
+            <!--                app:layout_constraintTop_toTopOf="parent">-->
+
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/txt_Mainsearch"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:background="@null"-->
+            <!--                    android:overScrollMode="always"-->
+            <!--                    android:padding="5dp"-->
+            <!--                    android:scrollbarStyle="insideInset"-->
+            <!--                    android:scrollbars="vertical"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textCursorDrawable="@drawable/custome_curser_style_color"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Cardcurrentlocation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="200dp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imgcurrentlocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/current_location" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--            android:id="@+id/constraint_MainSearch"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:layout_marginEnd="35dp"-->
+        <!--            android:background="@drawable/search_round"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:id="@+id/txt_Mainsearch"-->
+        <!--                android:layout_width="250dp"-->
+        <!--                android:layout_height="50dp"-->
+        <!--                android:background="@null"-->
+        <!--                android:ellipsize="end"-->
+        <!--                android:hint="@string/where_to_go"-->
+        <!--                android:textSize="16sp"-->
+        <!--                android:paddingStart="15dp"-->
+        <!--                android:imeOptions="actionSearch"-->
+        <!--                android:padding="5dp"-->
+        <!--                android:singleLine="true"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--&lt;!&ndash;            <EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;              />&ndash;&gt;-->
+
+
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/Cardcurrentlocation"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_marginEnd="10dp"-->
+        <!--            app:cardCornerRadius="25dp"-->
+        <!--            app:cardBackgroundColor="@color/blue"-->
+        <!--            android:layout_marginBottom="180dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/imgcurrentlocation"-->
+        <!--                android:layout_width="30dp"-->
+        <!--                android:layout_height="30dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:src="@drawable/current_location" />-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <include
+            layout="@layout/nav_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
